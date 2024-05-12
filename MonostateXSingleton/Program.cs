@@ -28,20 +28,20 @@ Console.WriteLine("Singleton. is the same instance? {0}", list2Moview.Equals(lis
 
 Console.WriteLine("-------------------Monostate-------------------");
 
-IMonostate monostateOne = new MonostateMovies();
+IMonostateSessionMovie monostateSessionNow = new MonostateSessionNow();
+monostateSessionNow.SetSessionMovie(lotr, back);
 
-monostateOne.Mono.AddParams(lotr, back);
+IMonostateSessionMovie monostateSessionNextWeek = new MonostateSessionNextWeek();
 
-IMonostate monostateTwo = new MonostateMovies();
+monostateSessionNextWeek.SetSessionMovie(avatar);
 
-monostateTwo.Mono.AddParams(avatar);
+Console.WriteLine("Monostate Movies Today instance");
+monostateSessionNow.MonoSession.ForEach(p => p.Print());
 
-Console.WriteLine("Monostate object one");
-monostateOne.Mono.ForEach(Console.WriteLine);
+Console.WriteLine("Monostate Movies next week instance");
+monostateSessionNextWeek.MonoSession.ForEach(p => p.Print());
 
-Console.WriteLine("Monostate object two");
-monostateTwo.Mono.ForEach(Console.WriteLine);
 
-Console.WriteLine("Monostate. is the same instance? {0}", monostateOne.Equals(monostateTwo));
+Console.WriteLine("Monostate. is the same instance? {0}", monostateSessionNextWeek.Equals(monostateSessionNow));
 
 #endregion
