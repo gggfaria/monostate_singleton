@@ -16,7 +16,7 @@ O padrão monostate foi proposto para resolver os problemas do singleton. A idei
 
 Nesse projeto construí um console application que cria uma instância de uma lista de Movie, adicionando itens na lista, usando tanto o singleton quanto o monostate pattern. 
 
-No caso do Singleton é possível observar que o objeto retornado sempre será o mesmo no final, porém no caso do monostate a classe instanciada têm instancias diferentes, porém compartilham a mesma instância do item em questão. 
+No caso do Singleton é possível observar que o objeto retornado sempre será o mesmo no final, porém no caso do monostate a classe instanciada tem instancias diferentes, porém compartilham a mesma instância do item em questão. 
 
 ## Interface com o monostate
 
